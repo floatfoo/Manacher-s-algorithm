@@ -37,7 +37,6 @@ public class Manachers {
             }
 
         }
-        //System.out.println(max /2  + " " + lps[max] /2 );
 
         return s.substring(max/2 - lps[max]/2, max/2 + lps[max]/2 + 1);
     }
@@ -49,7 +48,6 @@ public class Manachers {
     }
 
     public static void main(String[] args) {
-        //String test = lps("ababababb");
         String test = lps("abababab");
         System.out.println(test);
     }
