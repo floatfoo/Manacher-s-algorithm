@@ -1,7 +1,7 @@
 #   Manacher's algorithm (longest palindromic string)
 
 Here I just cover algotithm basic idea for future myself (and, perhaps, another fellow cs student).
-Thanks a lot to this guy ( https://www.youtube.com/watch?v=SV1ZaKCozS4 ). But you can really just read through this README to grasp the idea.
+Thanks a lot to [this guy]( https://www.youtube.com/watch?v=SV1ZaKCozS4 ). But you can really just read through this README to grasp the idea.
 
 Basic principle here is we get some string on input, call is **s**. Next, say **n** = s.length(). So we create auxiliary char array named **sChar** with length equals to 2n+1. For concrete example, let's pick A string "abaaba", then sChar is "#a#b#a#a#b#a#", length are 8 and 17 respectively.
 
