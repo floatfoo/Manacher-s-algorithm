@@ -184,7 +184,7 @@ Time Complexity: O(n)
 Space Complexity: O(n)
 
 The more you know!
-![Alt text](/home/floatfoo/Documents/Projects/manachers/But_It's_Honest_Work.jpg)
+![Alt text](But_It's_Honest_Work.jpg)
 
 
 ---
