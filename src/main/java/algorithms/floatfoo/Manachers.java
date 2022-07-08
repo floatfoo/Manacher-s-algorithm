@@ -23,12 +23,15 @@ public class Manachers {
             // check for right bound violation
 
             if ( i < R && i >= C ) {
-                lps[i] = Math.min(lps[C - ( i - C )], R - (i - R));
+                lps[i] = Math.min(lps[C - ( i - C )], R - i);
+                if (i == 7) {
+                }
             }
 
-            while (i - lps[i] - 1 >= 0 && i + lps[i] + 1 < hashed.length && hashed[i - lps[i] - 1] == hashed[i + lps[i] + 1]) { // what is out of bounds?
+            while (i - lps[i] - 1 >= 0 && i + lps[i] + 1 < hashed.length && hashed[i - lps[i] - 1] == hashed[i + lps[i] + 1]) {
                 lps[i]++;
             }
+
 
             if ( i + lps[i] > R  ) {
                 max = lps[max] >= lps[i] ? max : i;
@@ -37,8 +40,14 @@ public class Manachers {
             }
 
         }
+        StringBuilder res = new StringBuilder();
+        for (int i = max - lps[max] ; i <= max + lps[max]; i++) {
+            if (hashed[i] != '#') {
+                res.append(hashed[i]);
+            }
+        }
 
-        return s.substring(max/2 - lps[max]/2, max/2 + lps[max]/2 + 1);
+        return res.toString();//s.substring(max/2 - lps[max]/2, max/2 + lps[max]/2) - this should also work, but some cases do not work as intendent
     }
 
     private static void prework(char[] hash, String s) {
@@ -48,7 +57,7 @@ public class Manachers {
     }
 
     public static void main(String[] args) {
-        String test = lps("abababab");
+        String test = lps("cbbd");
         System.out.println(test);
     }
 }
